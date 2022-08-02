@@ -27,6 +27,14 @@ class CategoriesRepository {
     list(): Category[] {
         return this.categories;
     }
+    // verificação cadastro
+    findByName(name: string): Category {
+        const category = this.categories.find(
+            (category) => category.name === name
+        );
+        return category;
+    }
+    // // fim verificação de cadastro
 }
 
 export { CategoriesRepository };
