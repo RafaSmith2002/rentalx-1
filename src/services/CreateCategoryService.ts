@@ -1,4 +1,4 @@
-import { CategoriesRepository } from "../repositories/CategoriesRepository";
+import { ICategoriesRepository } from "../repositories/ICategoriesRepository";
 // criando uma interface para receber as informações da minha rota
 interface IRequest {
     name: string;
@@ -7,7 +7,7 @@ interface IRequest {
 
 class CreateCategoryService {
     // Inicializando meu objeto
-    constructor(private categoriesRepository: CategoriesRepository) {}
+    constructor(private categoriesRepository: ICategoriesRepository) {}
     // o execute executa a minha tarefa quando é chamado.
     execute({ name, description }: IRequest) {
         // verificação de cadastro
