@@ -1,11 +1,11 @@
-import { ICategoriesRepository } from "../repositories/ICategoriesRepository";
+import { ICategoriesRepository } from "../../repositories/ICategoriesRepository";
 // criando uma interface para receber as informações da minha rota
 interface IRequest {
     name: string;
     description: string;
 }
 
-class CreateCategoryService {
+class CreateCategoryUseCase {
     // Inicializando meu objeto
     constructor(private categoriesRepository: ICategoriesRepository) {}
     // o execute executa a minha tarefa quando é chamado.
@@ -23,4 +23,4 @@ class CreateCategoryService {
     }
 }
 
-export { CreateCategoryService };
+export { CreateCategoryUseCase };
