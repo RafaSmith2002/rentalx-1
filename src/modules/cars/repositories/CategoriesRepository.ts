@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define */
 import { Category } from "../model/category";
 import {
     ICategoriesRepository,
@@ -13,9 +14,20 @@ import {
 class CategoriesRepository implements ICategoriesRepository {
     private categories: Category[]; // private define como o atributo vai ser acessado.
 
-    constructor() {
+    // criar um método para verificar e instanciar o repositório
+    private static INSTANCE: CategoriesRepository;
+
+    private constructor() {
         this.categories = [];
     }
+
+    public static getInstance(): CategoriesRepository {
+        if (!CategoriesRepository.INSTANCE) {
+            CategoriesRepository.INSTANCE = new CategoriesRepository();
+        }
+        return CategoriesRepository.INSTANCE;
+    }
+
     create({ description, name }: ICreateCategoryDTO): void {
         const category = new Category();
 
