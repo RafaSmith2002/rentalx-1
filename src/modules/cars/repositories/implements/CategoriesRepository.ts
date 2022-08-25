@@ -1,9 +1,9 @@
 /* eslint-disable no-use-before-define */
-import { Category } from "../model/category";
+import { Category } from "../../model/category";
 import {
     ICategoriesRepository,
     ICreateCategoryDTO,
-} from "./ICategoriesRepository";
+} from "../ICategoriesRepository";
 
 // Interface transferida para o arquivo de interface: ICategoriesRepository.ts
 // interface ICreateCategoryDTO {

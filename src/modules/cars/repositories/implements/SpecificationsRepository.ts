@@ -1,8 +1,8 @@
-import { Specification } from "../model/Specifications";
+import { Specification } from "../../model/Specifications";
 import {
     ICreateSpecificationDTO,
     ISpecificationsRepository,
-} from "./ISpecificationsRepository";
+} from "../ISpecificationRepository";
 
 // criando uma classe que implemente minha interface de transferencia de dados.
 class SpecificationsRepository implements ISpecificationsRepository {
